@@ -8,8 +8,7 @@ class SearchForm extends React.Component {
     return (
       <div>
         <form onSubmit={this.props.search} className={this.props.error ? 'No Results Found' : ''}>
-          <input name='text' type='text' placeholder='Search Articles'/>
-          <input name='number' type='number' defaultValue='1' min='0' max='100'/>
+          <input name='character' type='text' placeholder='Character'/>
           <input type='submit'/>
         </form>
       </div>

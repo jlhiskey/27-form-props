@@ -6,18 +6,17 @@ import PropTypes from 'prop-types';
 class SearchResults extends React.Component {
   render() {
     return (
-      this.props.topicData.length !== 0
+      this.props.characterData.length !== 0
         ? <div className='searchResults'>
           {
-            this.props.topicData.map((topic, index) => <div key={index}>
-                <a href={topic.data.url}>{topic.data.title}
-                  <p>{topic.data.ups}</p>
-                </a>
-              </div>)
+            this.props.characterData.map((character, index) => <div key={index}>
+                <p>Character Name: {character.name}</p>
+                <p>Character Height: {character.height}cm</p>
+            </div>)
           }
         </div>
         : <div className='empty'>
-          Please Specify an Article Subject And The Total Number of Results You Want to See
+          Search for a character from the Star Wars Universe
         </div>
     );
   }
